@@ -1,4 +1,4 @@
-//Suma y promedio con bucle for
+/*Suma y promedio con bucle for
 
 const numeros = [10,20,50,70,100,20];
 
@@ -22,4 +22,24 @@ const calcularMedia = (numeros) =>{
 };
 
 
-console.log(calcularMedia(numeros));
+console.log(calcularMedia(numeros));*/
+
+
+//Lo mismo pero con la funcion de reduce
+
+
+const numeros = [10,40,35,100,300,500];
+
+const calcularMedia2 = (numeros) =>{
+
+    let promedio;
+
+    let suma = numeros.reduce((a,b) => a + b , 0);
+
+    promedio = suma/numeros.length;
+
+    return promedio.toFixed(2);
+
+};
+
+console.log(`El promedio es de: ${calcularMedia2(numeros)}`);
