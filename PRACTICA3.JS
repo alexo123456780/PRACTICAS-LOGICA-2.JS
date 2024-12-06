@@ -1,3 +1,4 @@
+//Mostrar Consecutivos
 let inicio = 10;
 let fin = 40;
 
