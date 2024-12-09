@@ -1,50 +1,95 @@
-*{
-    padding: 0;
+/* Reset básico */
+* {
     margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
-body{
-
-    background-color:powderblue;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    color:black;
-    line-height: 1.7;
+/* Estilo del body */
+body {
+    background: #f4f4f9;
+    font-family: 'Trebuchet MS', Arial, sans-serif;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
 
-.titulo-principal{
+.container {
+    background: #fff;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+    width: 90%;
+    text-align: center;
+}
 
-    background-color: aqua;
+.titulo-principal h2 {
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.operaciones-design {
     display: flex;
-    align-items: center;
-    justify-content: center;
+    flex-direction: column;
+    padding: 100px 0;
+    height: 100px 50px;
+    width: 300px 0;
+    border-radius: 100rem;
+    line-height: 1.5;
+}
+
+
+label {
+    font-weight: bold;
+    font-size: 1rem;
+    margin-bottom: 5px;
+}
+
+input, select {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+}
+
+input:focus, select:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 4px rgba(0, 123, 255, 0.5);
+}
+
+.btn {
+    background: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background: #0056b3;
+}
+
+.resultado {
+    margin-top: 20px;
     font-size: 1.2rem;
     font-weight: bold;
-    margin: 30px auto;
-    padding: 10px;
-    width: 100%;
-    max-width: 600px;
-    border-radius: 40px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    text-align: center;
-
 }
 
-.operaciones-design{
+#calcular{
 
-    background-color:honeydew;
-    width: 100px 0;
-    padding: 30rem;
-    height: 10px;
-    align-items: center;
-    justify-content: center;
-    display: flex;
-    margin: 30px auto;
-    border-radius: 100px;
-    max-width: 120rem;
-    text-align: center;
+    border-radius: 30px;
+    width: 30px 0;
+    height: 50px ;
+    color: #0056b3;
+    background: -o-linear-gradient(red,black);
+
 
 }
-
-
-

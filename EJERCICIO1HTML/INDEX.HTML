@@ -8,43 +8,36 @@
 </head>
 <body>
 
+<div class="container">
     <div class="titulo-principal">
-        <h2>Calculadora Basica</h2>
+        <h2>Calculadora Básica</h2>
     </div>
 
     <div class="operaciones-design">
-
         <form id="valores">
+            <label for="input1">Primer valor</label>
+            <input type="number" id="input1" placeholder="Ingrese el primer valor">
 
-            <label for="input1">Ingrese un valor</label>
-            <br>
-            <input type="number"  id="input1" placeholder="Ingrese primer valor">
+            <label for="input2">Segundo valor</label>
+            <input type="number" id="input2" placeholder="Ingrese el segundo valor">
 
-            
-
-
-
-
+            <label for="selector">Seleccione una operación</label>
+            <select id="selector">
+                <option value="suma">Sumar</option>
+                <option value="resta">Restar</option>
+                <option value="multiplicar">Multiplicar</option>
+                <option value="dividir">Dividir</option>
+            </select>
         </form>
-
-        
-
-
     </div>
 
+    <button id="calcular">Calcular</button>
 
 
-    
+    <div id="resultado" class="resultado"></div>
 
+</div>
 
-
-
-
-
-
-
-
-
-    <script src="SCRIPT.JS"></script>
+<script src="SCRIPT.JS"></script>
 </body>
 </html>
