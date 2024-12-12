@@ -2,7 +2,7 @@ const generarFibonazzi = (valor) =>{
 
     if(valor < 1){
 
-        return ['Hijole mano no pongas numeros asi'];
+        return ['Hijole mano no pongas numeros asi'].join('')
     }
 
     const fibonazzi = [0,1];
@@ -25,4 +25,4 @@ const generarFibonazzi = (valor) =>{
 }
 
 
-console.log(generarFibonazzi(100));
+console.log(generarFibonazzi(1000010101010101010101010101010100101010101010100101010101010101));
