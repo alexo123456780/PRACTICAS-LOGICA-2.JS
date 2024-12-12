@@ -1,69 +1,37 @@
+// Seleccionar elementos del DOM
 const inpntarea = document.getElementById('tarea');
-
 const btnAgregarTarea = document.getElementById('agregar');
-
 const lista = document.getElementById('mi-lista');
 
-const contenedor = document.getElementById('conteiner');
-
-
+// Arreglo para almacenar las tareas
 const tareasListas = [];
 
-const crearTitulo =document.createElement('h3');
-
-crearTitulo.textContent = `Lista de tareas`;
-
-contenedor.prepend(crearTitulo);
-
-
-
-
-const tareas = () =>{
-
-    lista.innerHTML = '';
-
-    tareasListas.forEach((elemento,indice) =>{
-
-    let crearLista = document.createElement('li');
-
-    crearLista.textContent = `${indice+1} : ${elemento}`;
-
-    lista.appendChild(crearLista);
-
-    contenedor.appendChild(crearTitulo);
-
+// Función para renderizar las tareas
+const tareas = () => {
+    lista.innerHTML = ''; // Limpiar la lista antes de renderizar
+    tareasListas.forEach((elemento, indice) => {
+        const crearLista = document.createElement('li');
+        crearLista.textContent = `${indice + 1} : ${elemento}`;
+        lista.appendChild(crearLista); // Agregar la tarea como un elemento <li>
     });
+};
 
-}
-
-const agregartodaslasTareas = () =>{
-
-    let tareaLimpia = inpntarea.value.trim();
-
-    if(tareaLimpia){
-
-        tareasListas.push(tareaLimpia);
-        tareas();
-
+// Función para agregar una nueva tarea
+const agregartodaslasTareas = () => {
+    const tareaLimpia = inpntarea.value.trim(); // Eliminar espacios innecesarios
+    if (tareaLimpia) {
+        tareasListas.push(tareaLimpia); // Agregar la tarea al arreglo
+        tareas(); // Renderizar las tareas nuevamente
     }
+    inpntarea.value = ''; // Limpiar el campo de texto
+};
 
-    inpntarea.value = '';
+// Escuchar el clic del botón
+btnAgregarTarea.addEventListener('click', agregartodaslasTareas);
 
-}
-
-
-btnAgregarTarea.addEventListener('click',agregartodaslasTareas);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+// Escuchar el evento Enter en el campo de texto
+inpntarea.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter') {
+        agregartodaslasTareas();
+    }
+});
