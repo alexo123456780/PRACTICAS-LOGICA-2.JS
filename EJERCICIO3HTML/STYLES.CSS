@@ -1,0 +1,59 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+
+
+    background-color: azure;
+    font-family:'Courier New', Courier, monospace;
+    color: brown;
+    text-align: center;
+    padding: 20px;
+    
+}
+
+h2{
+    margin-bottom: 50px;
+    font-size:1.7rem;
+
+}
+
+input{
+
+    border-radius: 7px;
+    width: 20rem;
+    text-align: center;
+    height: 1.7rem;
+
+}
+
+button{
+
+    border-radius: 13px;
+    background: -moz-linear-gradient(aquamarine,gray);
+    text-align: center;
+    height: 2rem;
+    width: 7rem ;
+    font-size: small;
+    cursor: pointer;
+
+}
+
+div{
+
+    margin-top: 50px;
+
+}
+
+li{
+    color: black;
+    text-align: center;
+    line-height: 2;
+    font-family: cursive;
+
+}
+
+
