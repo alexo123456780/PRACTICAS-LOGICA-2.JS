@@ -6,6 +6,10 @@ class Banco {
 
         this.#saldo = saldoInicial;
 
+        if(this.#saldo <= 0){
+            throw new Error (`Error: No se puede poner numeros negativos`)
+        }
+
     }
 
 
@@ -16,6 +20,15 @@ class Banco {
     }
 
     retirarDinero(monto){
+
+        if(monto > this.#saldo){
+
+            throw new Error (`Error: No cuentas con el saldo suficiente`);
+        }
+
+        if(monto <= 0){
+            throw new Error (`Error: Saldo negativo o nulo`);
+        }
 
         let retiro = this.#saldo -= monto;
 
@@ -39,9 +52,12 @@ const banco = new Banco (3500);
 
 const movimientoBancario = (opcion,monto) =>{
 
-    let resultado;
 
-    switch(opcion.toLowerCase()){
+    try{
+
+        let resultado;
+
+        switch(opcion.toLowerCase()){
 
         case 'consulta':
         resultado = banco.consultarSaldo();
@@ -63,14 +79,15 @@ const movimientoBancario = (opcion,monto) =>{
         break;
     }
 
+    }catch(error){
+        console.log(error.message);
+    }
+
+    
+
 }
 
-
-
-
-movimientoBancario('retiro',500)
-movimientoBancario('deposito',100);
-
+movimientoBancario('retiro',-567);
 
 
 
